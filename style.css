@@ -1,4 +1,4 @@
-/* ===== base ===== */
+
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#050505; --neon1:#00ff95; --neon2:#00eaff; --muted:#0f7f55;
@@ -10,11 +10,8 @@ body{
   min-height:100vh;
   overflow-x:hidden;
 }
-
-/* MATRIX CANVAS */
 #matrix{position:fixed;inset:0;width:100%;height:100%;z-index:-5;background:#000}
 
-/* TOP NAV */
 .topbar{position:sticky;top:0;z-index:60;padding:10px 20px}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1200px;margin:0 auto}
 .logo{color:var(--neon2);text-decoration:none;font-weight:700}
@@ -22,15 +19,14 @@ body{
 .nav-links a{color:var(--neon1);text-decoration:none;padding:8px 12px;border-radius:8px;opacity:.9;transition:all .18s}
 .nav-links a.active, .nav-links a:hover{box-shadow:0 0 16px var(--neon2); color:white; transform:translateY(-4px)}
 
-/* THEME TOGGLE */
+
 .toggle-btn{background:transparent;border:2px solid rgba(0,255,149,0.12);color:var(--neon1);padding:8px;border-radius:50%;cursor:pointer}
 
-/* PAGE LAYOUT */
+
 .page{max-width:1200px;margin:30px auto;padding:0 20px}
 .box{background:rgba(0,0,0,0.45);border-radius:14px;padding:26px;margin:18px 0}
 .neon-border{border:2px solid rgba(0,255,149,0.12);box-shadow:0 0 14px rgba(0,234,255,0.04)}
 
-/* HERO */
 .hero{text-align:center;padding:30px}
 .hack-text{font-family:monospace}
 .glitch{font-size:2rem;color:var(--neon1);position:relative;display:inline-block}
@@ -38,10 +34,8 @@ body{
 .glitch::before{color:var(--neon2);mix-blend-mode:screen;clip-path:inset(0 0 60% 0);transform:translate(-2px,-2px)}
 .glitch::after{color:#ff00ff;mix-blend-mode:screen;clip-path:inset(60% 0 0 0);transform:translate(2px,2px)}
 
-/* SUB */
 .sub{color:rgba(0,255,149,0.85);opacity:.9;margin-top:8px}
 
-/* HOLOGRAM CARD */
 .holo-area{display:flex;justify-content:center;margin:18px 0}
 .holo-card{width:300px;padding:20px;border-radius:14px;background:linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.25));border:2px solid rgba(0,255,149,0.08);text-align:center;transition:transform .15s,box-shadow .15s}
 .profile-wrap{width:150px;height:150px;margin:0 auto 10px;border-radius:50%;padding:6px;background:linear-gradient(135deg,rgba(0,255,149,0.05),rgba(0,234,255,0.03));display:flex;align-items:center;justify-content:center;overflow:visible}
@@ -53,10 +47,8 @@ body{
 .holo-role{font-size:.85rem;opacity:.9;margin-bottom:6px}
 .badge{padding:6px 8px;border-radius:8px;font-size:.75rem;border:1px solid rgba(0,255,149,0.06);color:#8fffc3;margin:4px}
 
-/* ABOUT TEXT */
 .about-text{max-width:800px;margin:18px auto;color:rgba(0,255,149,0.9);line-height:1.6}
 
-/* SKILLS 3D CARDS */
 .skills-3d{text-align:center}
 .card-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;padding:10px}
 .neon-card{background:rgba(0,0,0,0.5);border-radius:12px;padding:22px;border:2px solid var(--neon2);text-align:center;color:var(--neon2);box-shadow:0 0 12px rgba(0,234,255,0.06);transition:transform .18s,box-shadow .18s;cursor:pointer}
@@ -64,30 +56,25 @@ body{
 .neon-card h3{margin-bottom:8px;font-size:1.1rem}
 .neon-card p{opacity:.85;font-size:.9rem}
 
-/* CONTACT FORM */
 .contact-form{max-width:700px;margin:12px auto;display:grid;gap:12px}
 .contact-form input,.contact-form textarea{padding:12px;border-radius:10px;border:2px solid rgba(0,234,255,0.06);background:rgba(0,0,0,0.55);color:var(--neon1);outline:none}
 .btn{padding:12px;border-radius:10px;border:2px solid var(--neon1);background:transparent;color:var(--neon1);cursor:pointer}
 .btn:hover{background:var(--neon1);color:#000}
 
-/* RESPONSE */
 .response{margin-top:10px;font-weight:700;display:block;text-align:center}
 
-/* FOOTER */
 .site-footer{text-align:center;margin:22px 0;color:rgba(0,255,149,0.5)}
 
-/* RESPONSIVE */
 @media (max-width:700px){
   .profile-wrap{width:120px;height:120px}
   .neon-card{padding:16px}
   .glitch{font-size:1.6rem}
 }
 
-/* ---------- NEON DOOR ---------- */
 .neon-door {
   position: fixed;
   inset: 0;
-  z-index: 9999;             /* top of everything */
+  z-index: 9999;            
   pointer-events: auto;
   display: flex;
   overflow: hidden;
@@ -95,7 +82,6 @@ body{
   justify-content: center;
 }
 
-/* each panel covers half the screen */
 .door-panel {
   width: 50%;
   height: 100%;
@@ -110,7 +96,6 @@ body{
   will-change: transform;
 }
 
-/* neon edges on inner sides */
 .door-panel.left::after,
 .door-panel.right::after{
   content: "";
@@ -125,7 +110,6 @@ body{
 .door-panel.left::after { right: 0; border-top-right-radius: 2px; border-bottom-right-radius: 2px;}
 .door-panel.right::after { left: 0; border-top-left-radius: 2px; border-bottom-left-radius: 2px; }
 
-/* center vertical neon glare when closed */
 .door-center-glow {
   position: absolute;
   left: 50%;
@@ -139,12 +123,10 @@ body{
   transition: opacity 0.6s ease;
 }
 
-/* when door is opened (add .open to #neonDoor) */
 #neonDoor.open .door-panel.left  { transform: translateX(-105%); }
 #neonDoor.open .door-panel.right { transform: translateX(105%); }
 #neonDoor.open .door-center-glow { opacity: 0; transform: translateX(-50%) scaleX(0.6); }
 
-/* small flicker/glitch while opening */
 @keyframes neon-flicker {
   0% { opacity: 0.92; filter: hue-rotate(0deg); transform: translateX(0) }
   20% { opacity: 1; filter: hue-rotate(6deg); }
@@ -154,7 +136,6 @@ body{
 }
 #neonDoor.open .door-panel { animation: neon-flicker 1.05s linear both; }
 
-/* reveal content container: add .revealed when door opens */
 .main-reveal {
   opacity: 0;
   transform: translateY(8px) scale(0.997);
@@ -166,10 +147,8 @@ body{
   transform: translateY(0) scale(1);
 }
 
-/* hide door completely after animation (keeps document clean) */
 #neonDoor.hidden { display: none; pointer-events: none; }
 
-/* Accessibility: respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .door-panel { transition: none; animation: none; transform: translateX(-100%) !important; }
   #neonDoor { display: none; }
@@ -193,12 +172,8 @@ body{
   line-height: 1.6;
 }
 
-/* ---------- SIDEBAR / HAMBURGER ---------- */
-
-/* show nav-links on wide screens, hide sidebar toggle */
 .desktop-only { display: none; }
 
-/* hamburger */
 .hamburger {
   background: transparent;
   border: 0;
@@ -211,7 +186,6 @@ body{
 }
 .hamburger:focus { outline:3px solid rgba(0,234,255,0.08); }
 
-/* visible lines */
 .hamburger-lines { display:block; width:20px; height:2px; background:var(--neon1); position:relative; }
 .hamburger-lines::before, .hamburger-lines::after {
   content:""; position:absolute; left:0; right:0; height:2px; background:var(--neon1);
@@ -219,12 +193,10 @@ body{
 .hamburger-lines::before { top:-6px; }
 .hamburger-lines::after { bottom:-6px; }
 
-/* sidebar overlay */
 .sidebar-overlay {
   position: fixed; inset: 0; z-index: 1200; background: rgba(0,0,0,0.6);
 }
 
-/* sidebar panel */
 .sidebar {
   position: fixed;
   right: 8px;
@@ -243,18 +215,14 @@ body{
   padding: 8px;
 }
 
-/* when open */
 .sidebar[aria-hidden="false"] { transform: translateY(0); opacity: 1; }
 
-/* inner scroll area */
 .sidebar-inner { height:100%; display:flex; flex-direction:column; gap:8px; }
 
-/* header */
 .sidebar-header { display:flex; align-items:center; justify-content:space-between; padding:10px 12px; border-bottom:1px solid rgba(0,255,149,0.03) }
 .sidebar-header h3 { color:var(--neon2); font-size:1rem; margin:0; }
 .close-btn { background:transparent; border:0; color:var(--neon1); font-size:1.4rem; cursor:pointer; }
 
-/* nav links */
 .sidebar-nav { padding:10px; display:flex; flex-direction:column; gap:6px; overflow:auto; }
 .side-link, .side-sublink {
   display:block; padding:12px 14px; border-radius:8px; text-decoration:none; color:rgba(255,255,255,0.92);
@@ -270,47 +238,41 @@ body{
 }
 .collapsible-panel { padding:6px 6px 12px 6px; display:flex; flex-direction:column; gap:6px; }
 
-/* active link highlight */
 .side-link.active, .side-sublink.active {
   background: linear-gradient(90deg, rgba(0,234,255,0.06), rgba(0,255,149,0.06));
   color: #fff;
   box-shadow: 0 0 24px rgba(0,234,255,0.04);
 }
 
-/* scrollbar style inside sidebar */
 .sidebar-nav::-webkit-scrollbar { width:10px; }
 .sidebar-nav::-webkit-scrollbar-thumb { background: rgba(0,255,149,0.06); border-radius:8px; border:2px solid transparent; }
 
-/* responsive: show desktop nav links on medium+ screens and hide hamburger */
 @media (min-width:900px) {
   .desktop-only { display:flex; gap:14px; align-items:center; }
   .hamburger { display:none; }
   .sidebar { right:20px; top:70px; }
 }
 
-/* ---------- WELCOME: fixed top-left → top-right fast, precise ---------- */
 html, body { margin: 0; padding: 0; }
 
 .welcome-wrap {
   position: relative;
   width: 100%;
-  height: 56px;        /* adjust vertical space if needed */
+  height: 56px;        
   pointer-events: none;
 }
 
-/* fixed so it sits at viewport top and not affected by parent flex */
+
 .glitch.welcome {
   position: fixed;
-  top: 6px;            /* small offset from absolute top — adjust if you want flush */
+  top: 6px;           
   left: 0;
   white-space: nowrap;
   will-change: transform;
   z-index: 9999;
   transform: translateX(var(--xp, 0px));
-  /* no CSS animation here — JS drives motion for precision */
 }
 
-/* reduced motion safety */
 @media (prefers-reduced-motion: reduce) {
   .glitch.welcome {
     animation: none !important;
@@ -320,8 +282,6 @@ html, body { margin: 0; padding: 0; }
     position: fixed;
   }
 }
-
-/* ------- SOCIAL ICONS ------- */
 
 .social-links {
   margin-top: 20px;
@@ -342,3 +302,4 @@ html, body { margin: 0; padding: 0; }
   transform: translateY(-4px);
   text-shadow: 0 0 12px var(--neon2), 0 0 24px var(--neon1);
 }
+

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills — Sourav</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="matrix"></canvas>
+
+  <header class="topbar">
+  <nav class="sidebar-nav" role="menu" aria-label="Sidebar menu">
++ <a role="menuitem" href="index.html" class="side-link">Home</a>
++ <a role="menuitem" href="about.html" class="side-link">About me</a>
++ <a role="menuitem" href="skills.html" class="side-link">Skills</a>
++ <a role="menuitem" href="contact.html" class="side-link">Contact me</a>
+</nav>
+</header>
+
+<!-- Slide-out Sidebar (hidden by default) -->
+<aside id="siteSidebar" class="sidebar" aria-hidden="true" tabindex="-1">
+  <div class="sidebar-inner">
+    <div class="sidebar-header">
+      <h3>Menu</h3>
+      <button id="closeSidebar" class="close-btn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <nav class="sidebar-nav" role="menu" aria-label="Sidebar menu">
+      <a role="menuitem" href="index.html" class="side-link">Home</a>
+
+      <div class="collapsible">
+        <button class="collapsible-btn" aria-expanded="false">Explore <i class="fas fa-chevron-down"></i></button>
+        <div class="collapsible-panel" hidden>
+          <a role="menuitem" href="#" class="side-sublink">Discover</a>
+          <a role="menuitem" href="#" class="side-sublink">Projects</a>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <button class="collapsible-btn" aria-expanded="false">Settings <i class="fas fa-chevron-down"></i></button>
+        <div class="collapsible-panel" hidden>
+          <a role="menuitem" href="#" class="side-sublink">Help Center</a>
+          <a role="menuitem" href="#" class="side-sublink">Parental Control</a>
+          <a role="menuitem" href="#" class="side-sublink">Activate TV</a>
+          <a role="menuitem" href="#" class="side-sublink">Reset settings to default</a>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <button class="collapsible-btn" aria-expanded="false">Info <i class="fas fa-chevron-down"></i></button>
+        <div class="collapsible-panel" hidden>
+          <a role="menuitem" href="#" class="side-sublink">About Us</a>
+          <a role="menuitem" href="#" class="side-sublink">Terms of Use</a>
+          <a role="menuitem" href="#" class="side-sublink">Privacy Policy</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</aside>
+
+<!-- overlay to close the sidebar on mobile click-away -->
+<div id="sidebarOverlay" class="sidebar-overlay" hidden></div>
+
+
+  <main class="page">
+    <section class="box neon-border skills-3d">
+      <h2>&gt; Skills & Tools</h2>
+
+      <div class="card-container">
+        <div class="neon-card" data-title="Python"><h3>Python</h3><p>Automation, scripting, pentest tooling</p></div>
+        <div class="neon-card" data-title="C"><h3>C</h3><p>Low-level systems, debugging</p></div>
+        <div class="neon-card" data-title="JavaScript"><h3>JavaScript</h3><p>Web exploitation, tooling</p></div>
+        <div class="neon-card" data-title="HTML/CSS"><h3>HTML/CSS</h3><p>Frontend, XSS understanding</p></div>
+        <div class="neon-card" data-title="Cryptography"><h3>MATH</h3><p>Complex math solving</p></div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

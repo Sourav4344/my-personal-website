@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home — Sourav</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- matrix backdrop -->
+  <canvas id="matrix"></canvas>
+
+  <!-- top nav -->
+  <header class="topbar">
+  <nav class="sidebar-nav" role="menu" aria-label="Sidebar menu">
++ <a role="menuitem" href="index.html" class="side-link">Home</a>
++ <a role="menuitem" href="about.html" class="side-link">About me</a>
++ <a role="menuitem" href="skills.html" class="side-link">Skills</a>
++ <a role="menuitem" href="contact.html" class="side-link">Contact me</a>
+</nav>
+</header>
+
+<!-- Slide-out Sidebar (hidden by default) -->
+<aside id="siteSidebar" class="sidebar" aria-hidden="true" tabindex="-1">
+  <div class="sidebar-inner">
+    <div class="sidebar-header">
+      <h3>Menu</h3>
+      <button id="closeSidebar" class="close-btn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <nav class="sidebar-nav" role="menu" aria-label="Sidebar menu">
+      <a role="menuitem" href="index.html" class="side-link">Home</a>
+
+      <div class="collapsible">
+        <button class="collapsible-btn" aria-expanded="false">Explore <i class="fas fa-chevron-down"></i></button>
+        <div class="collapsible-panel" hidden>
+          <a role="menuitem" href="#" class="side-sublink">Discover</a>
+          <a role="menuitem" href="#" class="side-sublink">Projects</a>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <button class="collapsible-btn" aria-expanded="false">Settings <i class="fas fa-chevron-down"></i></button>
+        <div class="collapsible-panel" hidden>
+          <a role="menuitem" href="#" class="side-sublink">Help Center</a>
+          <a role="menuitem" href="#" class="side-sublink">Parental Control</a>
+          <a role="menuitem" href="#" class="side-sublink">Activate TV</a>
+          <a role="menuitem" href="#" class="side-sublink">Reset settings to default</a>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <button class="collapsible-btn" aria-expanded="false">Info <i class="fas fa-chevron-down"></i></button>
+        <div class="collapsible-panel" hidden>
+          <a role="menuitem" href="#" class="side-sublink">About Us</a>
+          <a role="menuitem" href="#" class="side-sublink">Terms of Use</a>
+          <a role="menuitem" href="#" class="side-sublink">Privacy Policy</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</aside>
+
+<!-- overlay to close the sidebar on mobile click-away -->
+<div id="sidebarOverlay" class="sidebar-overlay" hidden></div>
+
+
+  <main class="page">
+
+    <!-- hero -->
+    <section class="hero box neon-border" style="padding:40px; display:flex; flex-direction:column; align-items:center;">
+      <section class="hero box neon-border" style="padding:40px; display:flex; flex-direction:column; align-items:center;">
+  <!-- container to crop the slide-in animation cleanly -->
+<div class="welcome-wrap">
+  <h1 class="glitch welcome" data-text="WELCOME TO MY PERSONAL WEBSITE">WELCOME TO MY PERSONAL WEBSITE</h1>
+</div>
+</section>
+      <p class="sub" style="margin-top:8px;">Hacker Interface • Neon Dashboard • Terminal Ready</p>
+
+      <!-- mini hologram preview -->
+      <div style="margin-top:28px; width:100%; display:flex; justify-content:center;">
+        <div class="holo-card" id="homeHolo" style="width:220px;padding:16px;">
+          <div class="profile-wrap" style="width:120px;height:120px;margin-bottom:8px;">
+            <img src="profile.jpg" alt="Sourav" class="profile-photo">
+            <div class="scan-line"></div>
+          </div>
+          <h4 class="holo-name" style="font-size:1rem;">Sourav Maji</h4>
+          <p class="holo-role" style="font-size:0.8rem;">Aspiring Ethical Hacker </p>
+           <p class="holo-role" style="font-size:0.8rem;">Math Lover</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- optional small intro -->
+    <section class="box neon-border" style="margin-top:18px;">
+      <h2>&gt; Quick Intro</h2>
+      <p class="about-text">I research web security, reversible systems and complex math problems. This home screen is a launchpad — use the links above to explore my skills, projects, or to contact me.</p>
+    </section>
+
+  </main>
+
+  <!-- SOCIAL LINKS -->
+<div class="social-links">
+  <a href="https://facebook.com/profile.php?id=100044220210258" target="_blank">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://instagram.com/sourav__4344/?hl=en" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/sourav-maji-999ba4237/" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/Sourav4344" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+
+  <footer class="site-footer">© 2025 Sourav • Hacker Interface</footer>
+
+  <script src="script.js"></script>
+  <script>
+    // small helper to open the terminal area (scroll + focus)
+    function openTerminalQuick(){
+      const term = document.getElementById('terminalBox');
+      if(!term) return;
+      term.style.opacity = 1;
+      term.scrollIntoView({behavior:'smooth', block:'center'});
+      // optionally focus or trigger terminal typing
+      // trigger terminal typing if function exists:
+      if(typeof startTerminalTyping === 'function') startTerminalTyping();
+    }
+  </script>
+</body>
+</html>

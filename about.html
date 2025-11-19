@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Sourav</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="matrix"></canvas>
+
+  <header class="topbar">
+  <nav class="sidebar-nav" role="menu" aria-label="Sidebar menu">
++ <a role="menuitem" href="index.html" class="side-link">Home</a>
++ <a role="menuitem" href="about.html" class="side-link">About me</a>
++ <a role="menuitem" href="skills.html" class="side-link">Skills</a>
++ <a role="menuitem" href="contact.html" class="side-link">Contact me</a>
+</nav>
+</header>
+
+<!-- Slide-out Sidebar (hidden by default) -->
+<aside id="siteSidebar" class="sidebar" aria-hidden="true" tabindex="-1">
+  <div class="sidebar-inner">
+    <div class="sidebar-header">
+      <h3>Menu</h3>
+      <button id="closeSidebar" class="close-btn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <nav class="sidebar-nav" role="menu" aria-label="Sidebar menu">
+      <a role="menuitem" href="index.html" class="side-link">Home</a>
+
+      <div class="collapsible">
+        <button class="collapsible-btn" aria-expanded="false">Explore <i class="fas fa-chevron-down"></i></button>
+        <div class="collapsible-panel" hidden>
+          <a role="menuitem" href="#" class="side-sublink">Discover</a>
+          <a role="menuitem" href="#" class="side-sublink">Projects</a>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <button class="collapsible-btn" aria-expanded="false">Settings <i class="fas fa-chevron-down"></i></button>
+        <div class="collapsible-panel" hidden>
+          <a role="menuitem" href="#" class="side-sublink">Help Center</a>
+          <a role="menuitem" href="#" class="side-sublink">Parental Control</a>
+          <a role="menuitem" href="#" class="side-sublink">Activate TV</a>
+          <a role="menuitem" href="#" class="side-sublink">Reset settings to default</a>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <button class="collapsible-btn" aria-expanded="false">Info <i class="fas fa-chevron-down"></i></button>
+        <div class="collapsible-panel" hidden>
+          <a role="menuitem" href="#" class="side-sublink">About Us</a>
+          <a role="menuitem" href="#" class="side-sublink">Terms of Use</a>
+          <a role="menuitem" href="#" class="side-sublink">Privacy Policy</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</aside>
+
+<!-- overlay to close the sidebar on mobile click-away -->
+<div id="sidebarOverlay" class="sidebar-overlay" hidden></div>
+
+
+  <main class="page">
+    <section class="hero box neon-border">
+      <h1 class="glitch" data-text=">_ Hello, I'm Sourav">&gt;_ Hello, I'm <span>Sourav</span></h1>
+      <p class="sub">Ethical Hacker • Math Fanatic • Cyber Explorer</p>
+
+      <div class="holo-area">
+        <div class="holo-card" id="holoCard">
+          <div class="holo-inner">
+            <div class="profile-wrap">
+              <img src="profile.jpg" alt="Sourav" class="profile-photo" id="profilePhoto">
+              <div class="scan-line"></div>
+            </div>
+
+            <h3 class="holo-name">Sourav</h3>
+            <p class="holo-role">Ethical Hacker • Cybersecurity</p>
+
+            <div class="holo-badges">
+              <span class="badge">MATH Fanatic</span>
+              <span class="badge">C / HTML / CSS / JavaScript</span>
+              <span class="badge">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="about-text">I explore cybersecurity, ethical hacking, and math. I love understanding how systems break & how to defend them smarter. Currently learning advanced web pentesting and reverse engineering.</p>
+    </section>
+  </main>
+
+
+  <section class="more-info box neon-border">
+  <h2 class="section-title">More About Me</h2>
+
+  <p class="info-text">
+    I started learning cybersecurity from the basics — networking, Linux, and system internals.
+    My main focus is web application security, CTF challenges, and improving my exploit skills.
+  </p>
+
+  <p class="info-text">
+    When I'm not breaking systems, I'm usually learning math — especially number theory,
+    logic, and problem-solving techniques that help in hacking.
+  </p>
+
+  <p class="info-text">
+    My long-term goal is to become a top-level penetration tester and build my own security tools.
+  </p>
+</section>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
